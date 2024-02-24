@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const boardHeight = 20;
     const blockSize = 20;
     const speed = 100; // milliseconds
-
+    
     let snake = [{x: 10, y: 10}];
     let food = {x: 15, y: 15};
     let direction = "right";
