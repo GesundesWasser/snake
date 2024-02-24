@@ -17,6 +17,16 @@ document.addEventListener("DOMContentLoaded", function() {
     let gameOver = true;
     let score = 0;
 
+    // Function to check if the screen size is below a certain threshold
+    function isMobileScreenSize() {
+        return window.innerWidth < 768 || window.innerHeight < 768;
+    }
+
+    if (isMobileScreenSize()) {
+        alert("Sorry, this game is not available on mobile devices.");
+        return; // Stop further execution of the script
+    }
+
     // Function to check if the user is on a mobile device
     function isMobileDevice() {
         return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
