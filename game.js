@@ -23,19 +23,12 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     if (isMobileScreenSize()) {
-        alert("Sorry, this game is not available on mobile devices.");
-        return; // Stop further execution of the script
-    }
-
-    // Function to check if the user is on a mobile device
-    function isMobileDevice() {
-        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    }
-
-    if (isMobileDevice()) {
-        alert("Sorry, this game is not available on mobile devices.");
-        return; // Stop further execution of the script
-    }
+        const errorMessage = document.createElement("div");
+        errorMessage.textContent = "Sorry, this game is not available on mobile devices.";
+        errorMessage.style.color = "red";
+        errorMessage.style.textAlign = "center";
+        document.body.appendChild(errorMessage);
+    } else {
 
     function draw() {
         board.innerHTML = "";
@@ -139,4 +132,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.addEventListener("keydown", handleKeyPress);
     newGameBtn.addEventListener("click", startGame);
-});
+}});
