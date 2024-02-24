@@ -14,7 +14,7 @@ header img {
 }
 header h1 {
     margin: 0;
-    color: #fff;
+    color: rgb(4, 190, 35);
     display: inline-block;
     vertical-align: middle; /* Align the text vertically */
 }
